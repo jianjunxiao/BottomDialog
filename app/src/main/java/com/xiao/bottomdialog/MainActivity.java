@@ -44,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
         layoutParams.width = getResources().getDisplayMetrics().widthPixels;
         contentView.setLayoutParams(layoutParams);
         bottomDialog.getWindow().setGravity(Gravity.BOTTOM);
+        bottomDialog.setCanceledOnTouchOutside(true);
         bottomDialog.getWindow().setWindowAnimations(R.style.BottomDialog_Animation);
         bottomDialog.show();
     }
@@ -56,6 +57,7 @@ public class MainActivity extends AppCompatActivity {
         params.width = getResources().getDisplayMetrics().widthPixels - DensityUtil.dp2px(this, 16f);
         params.bottomMargin = DensityUtil.dp2px(this, 8f);
         contentView.setLayoutParams(params);
+        bottomDialog.setCanceledOnTouchOutside(true);
         bottomDialog.getWindow().setGravity(Gravity.BOTTOM);
         bottomDialog.getWindow().setWindowAnimations(R.style.BottomDialog_Animation);
         bottomDialog.show();
