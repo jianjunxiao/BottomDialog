@@ -16,16 +16,17 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
-applicationVariants.all { variant ->
-    variant.outputs.all { output ->
-        def outputFile = output.outputFile
-        if (outputFile != null && outputFile.name.endsWith('.apk')) {
-            def fileName = "bottom_dialog_v${defaultConfig.versionName}.apk"
-            outputFileName = fileName
+    applicationVariants.all { variant ->
+        variant.outputs.all { output ->
+            def outputFile = output.outputFile
+            if (outputFile != null && outputFile.name.endsWith('.apk')) {
+                def fileName = "bottom_dialog_v${defaultConfig.versionName}.apk"
+                outputFileName = fileName
+            }
         }
     }
 }
+
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
