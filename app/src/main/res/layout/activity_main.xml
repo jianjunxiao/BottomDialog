@@ -10,12 +10,14 @@
 
     <Button
         android:id="@+id/btn_show_1"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="弹出底部对话框"/>
 
     <Button
         android:id="@+id/btn_show_2"
+        android:onClick="onClick"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="弹出底部圆角对话框"/>
